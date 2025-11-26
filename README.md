@@ -44,9 +44,9 @@ project-root/
     jobs/        # Workflows/orchestrators
     node/        # Node-specific utilities (optional)
     gas.entry.ts # GAS entrypoint (bundled → build/Code.js)
-    node.main.ts # Node entrypoint for local dev (optional)
+    node.entry.ts # Node entrypoint for local dev (optional)
 
-  test/
+  tests/
     core/        # Unit tests for src/core (pure logic)
     clients/     # Tests with mocks for clients
     jobs/        # Tests for workflow logic (with mocked clients)
