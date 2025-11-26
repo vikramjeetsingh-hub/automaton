@@ -1,38 +1,18 @@
 {
   "compilerOptions": {
-    // === Target/GAS compatibility ===
     "target": "ES2019",
-    "lib": ["ES2019", "DOM"],
     "module": "ESNext",
-    "moduleResolution": "Bundler",
-
-    // === TypeScript strictness ===
+    "moduleResolution": "bundler",
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-
-    // === Imports ===
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-
-    // === Output ===
-    // IMPORTANT: No outDir here.
-    // GAS build is handled by esbuild, not tsc.
-    "noEmit": true
+    "noEmit": true,
+    "types": [
+      "google-apps-script",
+      "vitest/globals",
+      "vite/client",
+      "node"
+    ]
   },
-
-  // === Included code ===
-   "include": [
-    "src/**/*",
-    "types/**/*.d.ts"
-  ],
-
-  // === Excluding Node-only files ===
-  "exclude": [
-    "dist",
-    "build",
-    "node_modules",
-    "test"
-  ]
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "exclude": ["build", "dist"]
 }
+
