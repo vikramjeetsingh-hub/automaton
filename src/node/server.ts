@@ -1,6 +1,6 @@
 // src/node/server.ts
 import express from "express";
-import { sum } from "../core/sum";
+import { sum } from "../core/sum.js";
 
 export const app = express();
 

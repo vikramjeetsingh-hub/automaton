@@ -5,7 +5,7 @@ import type {
   GetDatabaseResponse,
   UpdatePageResponse,
   PageObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from "@notionhq/client";
 
 // Make this a module so the imports are allowed
 export {};
