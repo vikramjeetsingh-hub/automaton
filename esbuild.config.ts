@@ -1,6 +1,6 @@
 import { build } from "esbuild";
   await build({
-    entryPoints: ["./src/gas.entry.ts"],
+    entryPoints: ["./src/gas/gas.entry.ts"],
     bundle: true,
     platform: "browser",
     format: "iife",

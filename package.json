@@ -7,7 +7,7 @@
     "publish": "npm run build:gas && clasp push",
     "build:node": "tsc -p tsconfig.node.json",
     "build": "npm run build:gas && npm run build:node",
-    "dev:node": "tsx src/server.ts",
+    "dev:node": "tsx src/node/server.ts",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "coverage": "vitest run --coverage"
