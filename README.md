@@ -50,4 +50,4 @@ project-root/
     core/        # Unit tests for src/core (pure logic)
     clients/     # Tests with mocks for clients
     jobs/        # Tests for workflow logic (with mocked clients)
-# Automaton
+

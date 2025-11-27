@@ -1,0 +1,24 @@
+import winston from "winston";
+import DailyRotateFile from "winston-daily-rotate-file";
+
+/**@inmyownwords7 Must export and import into server.ts later */
+const transport = new DailyRotateFile({
+  dirname: "logs",
+  filename: "app-%DATE%.log",
+  datePattern: "YYYY-MM-DD",
+  zippedArchive: true,
+  maxSize: "20m",
+  maxFiles: "14d"
+});
+
+export const logger = winston.createLogger({
+  level: "info",
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.Console(),
+    transport
+  ]
+});

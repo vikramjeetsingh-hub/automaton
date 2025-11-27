@@ -8,6 +8,6 @@
     "outDir": "dist",
     "types": ["node"]
   },
-  "include": ["src/node.entry.ts", "src/server.ts", "src/**/*.d.ts"],
+  "include": ["src/node/node.entry.ts", "src/node/server.ts", "src/**/*.d.ts"],
   "exclude": ["build", "dist"]
 }
