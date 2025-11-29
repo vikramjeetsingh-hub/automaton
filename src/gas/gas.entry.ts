@@ -30,3 +30,20 @@ import { runPeopleActivityJob } from "../jobs/peopleActivityJobs"; // <- singula
   const pageIds: string[] = []; // TODO: pull from config / sheet
   // runPeopleActivityJob(notionGas, pageIds); // once notionGas is wired
 };
+
+
+
+
+import { SheetReader, SheetWriter } from "../core/sheets";
+
+function testSheetTools() {
+  const reader = new SheetReader("Database");
+  const writer = new SheetWriter("Database");
+
+  const table = reader.readTable("A1:F");
+  Logger.log(table);
+
+  writer.appendRow(["New", "Row", "Data"]);
+}
+
+(global as any).testSheetTools = testSheetTools;
