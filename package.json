@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build:gas": "tsx esbuild.config.ts && copy appsscript.json build/appsscript.json",
+    "build:gas": "tsx esbuild.config.ts && cp appsscript.json build/appsscript.json",
     "publish": "npm run build:gas && clasp push",
     "build:node": "tsc -p tsconfig.node.json",
     "build": "npm run build:gas && npm run build:node",
